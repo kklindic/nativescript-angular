@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "org.nativescript.nativescriptangular",
+    "id": "hr.klindic.chat",
     "tns-android": {
       "version": "5.0.0"
     },
