@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "378472776766",
+    "firebase_url": "https://nativescript-chat.firebaseio.com",
+    "project_id": "nativescript-chat",
+    "storage_bucket": "nativescript-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378472776766:android:2e2666f0569eec6e",
+        "android_client_info": {
+          "package_name": "hr.klindic.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378472776766-19uk98rrdcjq81p0hpm7u75dhl36r8u2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAH1cnO1lM-dhghX2V9Zbj8aRVERkHijQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
