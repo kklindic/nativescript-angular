@@ -10,15 +10,41 @@ So you can still use template expressions, bindings, templates as well as all th
 The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
 http://docs.nativescript.org/ui/action-bar
 -->
-<ActionBar title="Players list" class="action-bar">
+<ActionBar title="WhatsApp" class="action-bar">
     <ActionItem (tap)="onShare()"
-        android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
-    <ActionItem (tap)='onDelete()'
-        text="delete" android.position="popup"></ActionItem>
-    <ActionItem (tap)="onAdd()"
-        text="add" android.position="popup"></ActionItem>
+        android.systemIcon="ic_menu_search_material" android.position="actionBar" color="white"></ActionItem>
+    <ActionItem (tap)='handlePopup()'
+        text="New group" android.position="popup"></ActionItem>
+    <ActionItem (tap)='handlePopup()'
+        text="New broadcast" android.position="popup"></ActionItem>
+    <ActionItem (tap)='handlePopup()'
+        text="WhatsApp Web" android.position="popup"></ActionItem>
+    <ActionItem (tap)='handlePopup()'
+        text="Starred messages" android.position="popup"></ActionItem>
+    <ActionItem (tap)='handlePopup()'
+        text="Settings" android.position="popup"></ActionItem>
 </ActionBar>
-
+<TabView id="tabViewContainer"
+            tabBackgroundColor="#075e54" 
+            tabTextColor="#128c7e"
+            selectedTabTextColor="#f7faff"
+            androidSelectedTabHighlightColor="#f7faff">
+    <StackLayout *tabItem="{title: 'Chats'}">
+        <StackLayout>
+            <Label text="Second Tab" textWrap="true" class="m-15 h2 text-left" color="blue"></Label>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Status'}">
+        <StackLayout>
+            <Label text="Second Tab" textWrap="true" class="m-15 h2 text-left" color="blue"></Label>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Calls'}">
+        <StackLayout>
+            <Label text="Second Tab" textWrap="true" class="m-15 h2 text-left" color="blue"></Label>
+        </StackLayout>
+    </StackLayout>
+</TabView>
 <!--
 The StackLayout stacks UI components on the screen — either vertically or horizontally.
 In this case, the StackLayout does vertical stacking; you can change the stacking to
@@ -29,11 +55,3 @@ These components make use of several CSS class names that are part of the Native
 core theme, such as p-20, btn, h2, and list-group. You can view a full list of the
 class names available for styling your app at https://docs.nativescript.org/ui/theme.
 -->
-<StackLayout class="page" >
-    <ListView [items]="items" class="list-group">
-        <ng-template let-item="item">
-            <Label [nsRouterLink]="['/item', item.id]" [text]="item.name"
-                class="list-group-item" (longPress)="onLongPress(item)"></Label>
-        </ng-template>
-    </ListView>
-</StackLayout>
