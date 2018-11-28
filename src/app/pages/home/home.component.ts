@@ -1,6 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import * as dialogs from "tns-core-modules/ui/dialogs";
-
 import { Item } from "../../item/item";
 
 @Component({
