@@ -1,15 +1,15 @@
 import { Component, OnInit } from "@angular/core";
 import * as dialogs from "tns-core-modules/ui/dialogs";
 
-import { Item } from "./item";
-import { ItemService } from "./item.service";
+import { Item } from "../../item/item";
+import { ItemService } from "../../item/item.service";
 
 @Component({
-    selector: "ns-items",
+    selector: "ns-home",
     moduleId: module.id,
-    templateUrl: "./items.component.html",
+    templateUrl: "./home.component.html",
 })
-export class ItemsComponent implements OnInit {
+export class HomeComponent implements OnInit {
     items: Item[];
 
     // This pattern makes use of Angular’s dependency injection implementation to inject an instance of the ItemService service into this class.
