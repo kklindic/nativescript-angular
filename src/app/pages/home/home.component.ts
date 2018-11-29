@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Item } from "../../item/item";
+import { isAndroid, isIOS } from "tns-core-modules/ui/page/page";
 
 @Component({
     selector: "ns-home",
